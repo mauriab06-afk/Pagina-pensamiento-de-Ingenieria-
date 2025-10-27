@@ -1,16 +1,60 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Inicio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #34495e;
+    }
+    .proyecto {
+      display: inline-block;
+      margin: 20px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 260px;
+    }
+    img {
+      width: 240px;
+      border-radius: 8px;
+    }
+    a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <h1>Pensamiento de ingenieria:</h1>
-  <h2>Proyectos:</h2>
-  <a href="impresion3d.html">Impresion 3D<br></a>
-  <img src="3d.jpg" width="240">
-  <a href="corteLaser.html">Corte laser<br></a>
-  <img src="laser.jpg" width="240">
-  <a href="circuitoPCB.html">Circuito PCB<br></a>
-  <img src="pcb.jpg" width="240">
+  <h1>Pensamiento de Ingeniería</h1>
+  <h2>Proyectos</h2>
+
+  <div class="proyecto">
+    <a href="impresion3d.html">Impresión 3D</a><br>
+    <img src="3d.jpg" alt="Proyecto de impresión 3D">
+  </div>
+
+  <div class="proyecto">
+    <a href="corteLaser.html">Corte Láser</a><br>
+    <img src="laser.jpg" alt="Proyecto de corte láser">
+  </div>
+
+  <div class="proyecto">
+    <a href="circuitoPCB.html">Circuito PCB</a><br>
+    <img src="pcb.jpg" alt="Proyecto de circuito PCB">
+  </div>
 </body>
 </html>
