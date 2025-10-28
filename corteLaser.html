@@ -1,32 +1,146 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Corte laser</title>
+  <title>Corte Láser</title>
   <style>
-    .proyecto {
-      display: inline-block;
-      margin: 20px;
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
       background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 50px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
     }
-    a {
-      text-decoration: none;
+
+    h2 {
       color: #007BFF;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
-  </style> 
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 10px;
+      margin: 20px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .volver a {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .volver a:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+      padding: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Corte laser</h1>
-  <h2>Proyecto:</h2>
-  <h3>Para este proyecto aprendimos a diseñar un cubo en tinkercad/h3>
-  <h3>Para despues pasar el gcode a una maquina de corte cnc</h3>
-  <img src="cubo.JPG" width="240">
-  <div class="proyecto">
-    <a href="index.html">Volver</a><br>
-  </div>
+  <header>
+    <h1>Proyecto: Corte Láser</h1>
+  </header>
+
+  <main>
+    <h2>Descripción del Proyecto</h2>
+    <p>
+      El <strong>corte láser</strong> es una técnica de manufactura digital que utiliza un rayo láser de alta potencia para cortar o grabar materiales
+      como madera, acrílico o MDF con gran precisión. En este proyecto, aprendimos a transformar un diseño digital en una pieza física
+      utilizando una máquina de corte CNC.
+    </p>
+
+    <p>
+      Comenzamos elaborando un modelo tridimensional en <strong>Tinkercad</strong>, donde diseñamos un <strong>cubo armado mediante encajes</strong>.
+      Este diseño nos permitió comprender cómo las dimensiones y tolerancias influyen en el ensamblaje físico de las piezas.
+      Fue necesario ajustar medidas para que las partes encajaran perfectamente sin necesidad de adhesivos.
+    </p>
+
+    <p>
+      Posteriormente, exportamos el archivo vectorial y lo convertimos en un formato compatible con la máquina de corte láser.
+      El software generó el <strong>G-code</strong>, que contiene las instrucciones exactas para los movimientos del láser durante el proceso de corte.
+    </p>
+
+    <img src="cubo.JPG" alt="Diseño del cubo en Tinkercad">
+
+    <p>
+      Durante la práctica, observamos la importancia de controlar parámetros como la <em>potencia del láser</em>, la <em>velocidad de corte</em>
+      y el <em>tipo de material</em>, ya que estos determinan la calidad del acabado y la precisión del grabado.
+      El resultado final fue un cubo ensamblable, demostrando el potencial de esta tecnología en el diseño de estructuras ligeras y precisas.
+    </p>
+
+    <p>
+      Gracias a esta experiencia, comprendimos cómo el <strong>corte láser</strong> se aplica en la ingeniería para la creación rápida de prototipos,
+      cajas para componentes electrónicos y estructuras personalizadas. Este proyecto reforzó el pensamiento de ingeniería a través del diseño,
+      la precisión y la experimentación.
+    </p>
+
+    <div class="volver">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desarrollado por Mauricio Abundiz Jasso — Ingeniería Mecatrónica</p>
+  </footer>
 </body>
 </html>

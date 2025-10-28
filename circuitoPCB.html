@@ -1,34 +1,148 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Circuito PCB</title>
   <style>
-    .proyecto {
-      display: inline-block;
-      margin: 20px;
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
       background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 50px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
     }
-    a {
-      text-decoration: none;
+
+    h2 {
       color: #007BFF;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
-  </style> 
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 10px;
+      margin: 20px 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .volver a {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .volver a:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+      padding: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Circuito PCB</h1>
-  <h2>Proyecto:</h2>
-  <h3>Para este proyecto aprendimos a leer diagramas de circuitos y a diseñarlos en tinkerkad</h3>
-  <img src="CircuitoTinker.JPG" width="240">
-  <h3>Para despues pasarlo a una placa pcb para facilitar las coneciones</h3>
-  <img src="Pcb1.jpeg" width="240">
-  <img src="Pcb2.jpeg" width="240">
-  <div class="proyecto">
-    <a href="index.html">Volver</a><br>
-  </div>
+  <header>
+    <h1>Proyecto: Circuito PCB</h1>
+  </header>
+
+  <main>
+    <h2>Descripción del Proyecto</h2>
+    <p>
+      En este proyecto aprendimos a diseñar y fabricar un <strong>circuito impreso (PCB)</strong>,
+      que permite conectar de forma ordenada y compacta los componentes electrónicos de un circuito.
+      Este tipo de diseño es fundamental en cualquier dispositivo electrónico moderno.
+    </p>
+
+    <p>
+      El proceso inició con la lectura y análisis del <strong>diagrama electrónico</strong>,
+      donde identificamos los componentes, sus conexiones y la forma correcta de integrarlos.
+      Utilizamos la plataforma <strong>Tinkercad</strong> para realizar las simulaciones necesarias y verificar el correcto funcionamiento del circuito.
+    </p>
+
+    <img src="CircuitoTinker.JPG" alt="Circuito simulado en Tinkercad">
+
+    <p>
+      Una vez validado el diseño, se realizó el trazado de las pistas en el software de diseño PCB.
+      Posteriormente, el circuito fue transferido a una <strong>placa de cobre</strong> mediante el proceso de serigrafía,
+      permitiendo que las conexiones quedaran grabadas con precisión.
+    </p>
+
+    <img src="Pcb1.jpeg" alt="Diseño físico del circuito PCB">
+    <img src="Pcb2.jpeg" alt="Placa de circuito terminada">
+
+    <p>
+      Este proceso nos permitió comprender la importancia del orden y la planeación al diseñar sistemas eléctricos reales.
+      También aprendimos sobre los materiales, herramientas y precauciones necesarias para fabricar circuitos seguros y funcionales.
+    </p>
+
+    <p>
+      Gracias a esta práctica, fortalecimos nuestras habilidades en <strong>diseño electrónico, simulación y manufactura</strong>,
+      aplicando el pensamiento de ingeniería desde la concepción hasta la implementación del circuito físico.
+    </p>
+
+    <div class="volver">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desarrollado por Mauricio Abundiz Jasso — Ingeniería Mecatrónica</p>
+  </footer>
 </body>
 </html>

@@ -2,59 +2,167 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pensamiento de Ingeniería</title>
   <style>
+    /* === Estilos generales === */
     body { 
-      font-family: Arial, sans-serif; 
-      text-align: center; 
-      background-color: #f4f4f4;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #eef2f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #2c3e50;
     }
-    h1 {
-      color: #2c3e50; 
+
+    /* === Encabezado === */
+    header {
+      background: linear-gradient(90deg, #007bff, #00bfff);
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    /* === Contenedor principal === */
+    main {
+      padding: 40px 20px;
+    }
+
     h2 {
       color: #34495e;
+      margin-bottom: 20px;
+      font-size: 1.8em;
     }
+
+    /* === Tarjetas de proyectos === */
+    .contenedor-proyectos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
     .proyecto {
-      display: inline-block;
-      margin: 20px;
       background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 260px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
     }
-    img {
-      width: 240px;
-      border-radius: 8px;
+
+    .proyecto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
-    a {
-      text-decoration: none;
+
+    .proyecto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .proyecto h3 {
+      margin: 10px 0 5px;
+      font-size: 1.3em;
       color: #007BFF;
+    }
+
+    .proyecto p {
+      padding: 0 15px 15px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .proyecto a {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #007BFF;
+      text-decoration: none;
       font-weight: bold;
     }
-    a:hover {
+
+    .proyecto a:hover {
       color: #0056b3;
     }
+
+    /* === Pie de página === */
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
-  <h1>Pensamiento de Ingeniería</h1>
-  <h2>Proyectos</h2>
 
-  <div class="proyecto">
-    <a href="impresion3d.html">Impresión 3D</a><br>
-    <img src="3d.jpg" alt="Proyecto de impresión 3D">
-  </div>
+  <header>
+    <h1>Pensamiento de Ingeniería</h1>
+    <p>Proyectos desarrollados durante el semestre de otoño 2025</p>
+  </header>
 
-  <div class="proyecto">
-    <a href="corteLaser.html">Corte Láser</a><br>
-    <img src="laser.jpg" alt="Proyecto de corte láser">
-  </div>
+  <main>
+    <h2>Explora mis proyectos</h2>
 
-  <div class="proyecto">
-    <a href="circuitoPCB.html">Circuito PCB</a><br>
-    <img src="pcb.jpg" alt="Proyecto de circuito PCB">
-  </div>
+    <div class="contenedor-proyectos">
+
+      <div class="proyecto">
+        <img src="3d.jpg" alt="Proyecto de impresión 3D">
+        <h3>Impresión 3D</h3>
+        <p>Uso de modelado 3D para crear piezas funcionales aplicadas en proyectos mecatrónicos.</p>
+        <a href="impresion3d.html">Ver más →</a>
+      </div>
+
+      <div class="proyecto">
+        <img src="laser.jpg" alt="Proyecto de corte láser">
+        <h3>Corte Láser</h3>
+        <p>Diseño y corte preciso de estructuras mediante láser para prototipos y maquetas.</p>
+        <a href="corteLaser.html">Ver más →</a>
+      </div>
+
+      <div class="proyecto">
+        <img src="pcb.jpg" alt="Proyecto de circuito PCB">
+        <h3>Circuito PCB</h3>
+        <p>Diseño de placas electrónicas utilizando software profesional para automatización.</p>
+        <a href="circuitoPCB.html">Ver más →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Mauricio Abundiz Jasso — Estudiante de Ingeniería Mecatrónica</p>
+    <p><a href="https://github.com/mauriab06-afk/Pagina-pensamiento-de-Ingenieria-">Ver repositorio en GitHub</a></p>
+  </footer>
+
 </body>
 </html>
+
