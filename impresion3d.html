@@ -1,32 +1,130 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Impresion 3D</title>
+  <title>Impresión 3D</title>
   <style>
-    .proyecto {
-      display: inline-block;
-      margin: 20px;
+    /* --- ESTILO GENERAL DE LA PÁGINA --- */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8f0ff, #ffffff);
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
       background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 50px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
     }
-    a {
-      text-decoration: none;
+
+    h2 {
       color: #007BFF;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
-  </style> 
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .volver a {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .volver a:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+      padding: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Impresion 3D</h1>
-  <h2>Proyecto:</h2>
-  <h3>Para este proyecto aprendimos a diseñar una figura movible en tinkercad/h3>
-  <h3>En mi caso una pelota dentro de cubo</h3>
-  <img src="diseño 3d.JPG" width="240">
-  <div class="proyecto">
-    <a href="index.html">Volver</a><br>
-  </div>
+  <header>
+    <h1>Proyecto: Impresión 3D</h1>
+  </header>
+
+  <main>
+    <h2>Descripción del Proyecto</h2>
+    <p>
+      En este proyecto exploramos el diseño y la fabricación de objetos tridimensionales mediante <strong>impresoras 3D</strong>.
+      Utilizamos la plataforma <strong>Tinkercad</strong> para modelar piezas con movimiento, aprendiendo cómo las dimensiones,
+      los ajustes y las tolerancias afectan al resultado final.
+    </p>
+
+    <p>
+      Mi diseño consistió en <strong>una pelota dentro de un cubo</strong>, una figura que demuestra cómo crear piezas
+      móviles sin ensamblarlas después. Este modelo permitió comprender la importancia de la precisión en el diseño digital
+      y cómo convertirlo en un objeto físico real.
+    </p>
+
+    <img src="diseño 3d.JPG" alt="Figura 3D diseñada en Tinkercad">
+
+    <div class="volver">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desarrollado por Mauricio Abundiz Jasso — Ingeniería Mecatrónica</p>
+  </footer>
 </body>
 </html>
